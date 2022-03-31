@@ -11,6 +11,11 @@ namespace UserRegistration
             string FirstName = Firstname;
             userRegexTest.validFirstName(FirstName);
 
+            Console.WriteLine("Enter Last name");
+            string LastName = Console.ReadLine();
+            userRegexTest.validLastName(LastName);
+
+
         }
-    }
+    }        
 }
