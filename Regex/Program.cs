@@ -19,6 +19,9 @@ namespace UserRegistration
             string Email = Console.ReadLine();
             userRegexTest.validEmail(Email);
 
+            Console.WriteLine("Enter Mobile Number");
+            string MobileNo = Console.ReadLine();
+            userRegexTest.validMobileNo(MobileNo);
 
         }
     }        
