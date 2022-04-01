@@ -18,6 +18,7 @@ namespace UserRegistration
                 Console.WriteLine(" press 5 for Password");
                 Console.WriteLine(" press 6 for Password at least have one Upper case");
                 Console.WriteLine(" press 7 for Password at least one Number");
+                Console.WriteLine(" press 8 for Password at least one special character");
 
                 option = int.Parse(Console.ReadLine());
 
@@ -58,11 +59,16 @@ namespace UserRegistration
                         string Password_2 = Console.ReadLine();
                         userRegexTest.validPassword_3(Password_2);
                         break;
+                    case 8:
+                        Console.WriteLine("Enter Password");
+                        string Password_3 = Console.ReadLine();
+                        userRegexTest.validPassword_4(Password_3);
+                        break;
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
                 }
-            } while (option != 7);
+            } while (option != 8);
         }
     }
 }      
