@@ -17,6 +17,7 @@ namespace UserRegistration
         public Regex PasswordRegex_2 = new Regex("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
         public Regex PasswordRegex_3 = new Regex("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
         public Regex PasswordRegex_4 = new Regex(@"^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9]{8,}$");
+        public Regex CheckEmailRegex = new Regex("^[a-z]{3,}(([.|+]{1})?([-]{1})?[0-9]{1,})?@[a-z0-9]{1,}.[a-z]{3}(.[a-z]{2,4})?$");
         public void validFirstName(string FirstName)
         {
             Console.WriteLine("\nFirst Name:" + FirstName);
@@ -111,6 +112,17 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine(" Password is not valid", Password_4);
+            }
+        }
+        public void validCheckEmail(string CheckEmail)
+        {
+            if (CheckEmailRegex.IsMatch(CheckEmail))
+            {
+                Console.WriteLine("{ Email is valid", CheckEmail);
+            }
+            else
+            {
+                Console.WriteLine(" Email is not valid", CheckEmail);
             }
         }
     }
