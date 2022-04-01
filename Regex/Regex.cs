@@ -15,6 +15,7 @@ namespace UserRegistration
         public Regex MobileNoRegex = new Regex("^[0-9]{2}[ ][5-9]{1}[0-9]{9}$");
         public Regex PasswordRegex = new Regex("^[a-zA-Z0-9]{8,}$");
         public Regex PasswordRegex_2 = new Regex("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
+        public Regex PasswordRegex_3 = new Regex("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
         public void validFirstName(string FirstName)
         {
             Console.WriteLine("\nFirst Name:" + FirstName);
@@ -85,6 +86,18 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine(" Password is not valid", Password_2);
+            }
+        }
+        public void validPassword_3(string Password_3)
+        {
+
+            if (PasswordRegex_3.IsMatch(Password_3))
+            {
+                Console.WriteLine("{0} Password is valid", Password_3);
+            }
+            else
+            {
+                Console.WriteLine("{0} Password is not valid", Password_3);
             }
         }
     }

@@ -17,6 +17,7 @@ namespace UserRegistration
                 Console.WriteLine(" press 4 for MobileNumber");
                 Console.WriteLine(" press 5 for Password");
                 Console.WriteLine(" press 6 for Password at least have one Upper case");
+                Console.WriteLine(" press 7 for Password at least one Number");
 
                 option = int.Parse(Console.ReadLine());
 
@@ -52,11 +53,16 @@ namespace UserRegistration
                         string Password_1 = Console.ReadLine();
                         userRegexTest.validPassword_2(Password_1);
                         break;
+                    case 7:
+                        Console.WriteLine("Enter Password");
+                        string Password_2 = Console.ReadLine();
+                        userRegexTest.validPassword_3(Password_2);
+                        break;
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
                 }
-            } while (option != 6);
+            } while (option != 7);
         }
     }
 }      
