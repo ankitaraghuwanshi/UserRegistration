@@ -11,12 +11,13 @@ namespace UserRegistration
             do
             {
                 Console.WriteLine("select your choice");
-                Console.WriteLine("1 for FirstName");
-                Console.WriteLine("2 for LaststName");
-                Console.WriteLine("3 for Email");
-                Console.WriteLine("4 for MobileNumber");
-                Console.WriteLine("5 for Password");
-               
+                Console.WriteLine(" press 1 for FirstName");
+                Console.WriteLine(" press 2 for LaststName");
+                Console.WriteLine(" press 3 for Email");
+                Console.WriteLine(" press 4 for MobileNumber");
+                Console.WriteLine(" press 5 for Password");
+                Console.WriteLine(" press 6 for Password at least have one Upper case");
+
                 option = int.Parse(Console.ReadLine());
 
                 switch (option)
@@ -46,11 +47,16 @@ namespace UserRegistration
                         string Password = Console.ReadLine();
                         userRegexTest.validPassword(Password);
                         break;
+                    case 6:
+                        Console.WriteLine("Enter Password");
+                        string Password_1 = Console.ReadLine();
+                        userRegexTest.validPassword_2(Password_1);
+                        break;
                     default:
                         Console.WriteLine("Invalid Choice");
                         break;
                 }
-            } while (option != 5);
+            } while (option != 6);
         }
     }
 }      
